@@ -1,0 +1,493 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Velvet Viesta</title>
+  <link
+    rel="icon"
+    href=
+"./assets/logo.png"
+    type="image/x-icon"
+/>
+  <link rel="stylesheet" href="./load.css">
+	<link rel="stylesheet" href="slidewhow.css"> 
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./test/load.css">
+</head> 
+<script>
+  function compareDates() {
+      // Get the values of Date A and Date B from the input fields
+      var dateAInput = document.getElementById("dateA").value;
+      var dateBInput = document.getElementById("dateB").value;
+
+      // Check if inputs are not empty
+      if (!dateAInput || !dateBInput) {
+          alert("Enter valid dates");
+          return;
+      }
+
+      // Convert input strings to Date objects
+      var dateA = new Date(dateAInput);
+      var dateB = new Date(dateBInput);
+
+      // Check if the dates are valid
+      if (isNaN(dateA.getTime()) || isNaN(dateB.getTime())) {
+          alert("Enter valid dates");
+          return;
+      }
+
+      // Compare the dates
+      if (dateA.getTime() === dateB.getTime()) {
+          alert("Invalid dates: Date A and Date B are equal");
+      } else if (dateA.getTime() > dateB.getTime()) {
+          alert("Invalid dates: Date A is greater than Date B");
+      } else {
+          // If Date A is less than Date B, redirect to new HTML page
+          window.location.href = 'booknow(after).html';
+      }
+  }
+</script>
+<body> 
+    <header class="header">
+      <div class="logo">
+        <a href="#"><img src="./assets/logo.png" alt="logo" /></a>
+      </div>
+        <div class="section__container header__container" id="home">
+         
+        </div>
+      </header>
+      
+<h1> Rooms Available</h1>
+<div class="container">
+  <div class="card dark">
+    <img src="./assets/room.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Premier Room with Balcony</h5>
+        <p class="card-text">Experience uninterrupted views of the Taj Mahal from the private balcony.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 1,000 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(1000)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-light-subtle mt-4">
+    <img src="./assets/room-15.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Premier Room with Balcony</h5>
+        <p class="card-text">Experience uninterrupted views of the Taj Mahal from the private balcony.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 2,500 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(2500)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-danger-subtle mt-4">
+    <img src="./assets/room-14.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Premier Room</h5>
+        <p class="card-text">With specially crafted furnishings, a marble ensuite bathroom and Taj views.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 3,200 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(3200)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-primary-subtle mt-4">
+    <img src="./assets/room-13.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Deluxe Suite</h5>
+        <p class="card-text">The perfect suite for romance; with Taj views and a shower for two.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 3,900 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(3900)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-success-subtle mt-4">
+    <img src="./assets/room-12.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Single Room</h5>
+        <p class="card-text">A spacious suite </p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 1,000 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(1000)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-warning-subtle mt-4">
+    <img src="./assets/room-11.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Premier Room with Balcony</h5>
+        <p class="card-text">Experience uninterrupted views of the Taj Mahal from the private balcony.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 2,500 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(2500)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-info-subtle mt-4">
+    <img src="./assets/room-10.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Luxury Suite</h5>
+        <p class="card-text">Features an octagonal glass shower and a private sun terrace. Both with Taj views.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 3,000 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(3000)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-dark mt-4">
+    <img src="./assets/room-9.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Premier Room with Balcony</h5>
+        <p class="card-text">Experience uninterrupted views of the Taj Mahal from the private balcony.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 2,700 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(2700)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-warning mt-4">
+    <img src="./assets/room8.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Premier Room with Triple Bed</h5>
+        <p class="card-text">Experience uninterrupted views of the Taj Mahal from the private balcony.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 5,000 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(5000)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-info mt-4">
+    <img src="./assets/room-7.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Luxury Suite</h5>
+        <p class="card-text">Features an octagonal glass shower and a private sun terrace. Both with Taj views.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 4,500 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(4500)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-dark-subtle mt-4">
+    <img src="./assets/room-6.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Premier Room with Quad Bed</h5>
+        <p class="card-text">Experience uninterrupted views of the Taj Mahal from the private balcony.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 6,300 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(6300)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-success mt-4">
+    <img src="./assets/room-5.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="text-section">
+        <h5 class="card-title">Premier Room with Balcony</h5>
+        <p class="card-text">Experience uninterrupted views of the Taj Mahal from the private balcony.</p>
+        <hr>
+        <ul>
+          <li>Wifi</li>
+          <li>24x7 room-service</li>
+          <li>Accomodation</li>
+          <li>Daily Breakfast</li>
+        </ul>
+        <br>
+        <hr>
+        
+        <h3>₹ 2,000 <span>per night</span></h3>
+        <span>excluding taxes and fees</span>
+
+      </div>
+      <div class="cta-section">
+       
+        <button class="book-btn" onclick="selectRoom(2000)">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<footer class="footer" >
+  <div class="section__container footer__container">
+    <div class="footer__col">
+      <div class="logo">
+        <a href="#home"><img src="assets/logo.png" alt="logo" /></a>
+      </div>
+      <p class="section__description">
+        Discover a world of comfort, luxury, and adventure as you explore
+        our curated selection of hotels, making every moment of your getaway
+        truly extraordinary.
+      </p>
+     
+    </div>
+    <div class="footer__col">
+      <h4>QUICK LINKS</h4>
+      <ul class="footer__links">
+        <li><a href="#">Browse Destinations</a></li>
+        <li><a href="#">Special Offers and Packages</a></li>
+        <li><a href="#">Room Types and Amenities</a></li>
+        <li><a href="#">Customer Reviews and Ratings</a></li>
+        <li><a href="#">Travel Tips and Guides</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>OUR SERVICES</h4>
+      <ul class="footer__links">
+        <li><a href="#">Concierge Assistance</a></li>
+        <li><a href="#">Flexible Booking Options</a></li>
+        <li><a href="#">Airport Transfers</a></li>
+        <li><a href="#">Wellness and Recreation</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>CONTACT US</h4>
+      <ul class="footer__links">
+        <li><a href="#">rayalpark@info.com</a></li>
+      </ul>
+      <div class="footer__socials">
+        <a href="#"><img src="assets/facebook.png" alt="facebook" /></a>
+        <a href="#"><img src="assets/instagram.png" alt="instagram" /></a>
+        <a href="#"><img src="assets/youtube.png" alt="youtube" /></a>
+        <a href="#"><img src="assets/twitter.png" alt="twitter" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bar">
+    Copyright © 2023 Web Design Mastery. All rights reserved.
+  </div>
+</footer>
+<div class="loader">
+  <script>
+      window.addEventListener("load", () => {
+          const loader = document.querySelector(".loader");
+        
+          loader.classList.add("loader--hidden");
+        
+          loader.addEventListener("transitionend", () => {
+            document.body.removeChild(loader);
+          });
+        });
+        
+  </script>
+  </div>
+<script>
+  function compareDates() {
+      // Get the date values from the input fields
+      var bday = new Date(document.getElementById('bday').value);
+      var bday1 = new Date(document.getElementById('bday1').value);
+      var result = document.getElementById('result');
+
+    
+        let newloc = "https://www.geeksforgeeks.org/";
+                window.location.replace(newloc);
+    
+    
+      // Clear previous result
+      result.innerHTML = '';
+
+      // Check if the dates are valid
+      if (!bday.getTime() || !bday1.getTime()) {
+          alert('enter valid dates');
+          return;
+      }
+
+      // Compare the dates
+      else if (bday >= bday1) {
+         alert('error');
+      } else {
+        
+         onclick()=newloc;
+      }
+      
+  }
+</script>
+<script>
+  function selectRoom(price) {
+      localStorage.setItem('selectedRoomPrice', price);
+      window.location.href = 'payment.html';
+  }
+</script>
+<script src="./test/load.js"></script>
+</body>
+</html>

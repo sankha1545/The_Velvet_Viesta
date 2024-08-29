@@ -1,0 +1,177 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Velvet Viesta</title>
+  <link
+    rel="icon"
+    href=
+"./assets/logo.png"
+    type="image/x-icon"
+/>
+  <link rel="stylesheet" href="./load.css">
+	<link rel="stylesheet" href="slidewhow.css"> 
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./test/load.css">
+</head> 
+<body> 
+    <header class="header">
+      <div class="logo">
+        <a href="#"><img src="./assets/logo.png" alt="logo" /></a>
+      </div>
+        <div class="section__container header__container" id="home">
+         
+        </div>
+      </header>
+      
+
+      <div class="pay">
+        <h2>Guest Details</h2>
+        <hr>
+        <br>
+        <br>
+        <form id="billForm" action="bill.php" post="method">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required>
+
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <br>
+          <br>
+          <label for="number">Phone-Number:</label>
+          <input type="tel" id="number" name="phone" required>
+<br>
+<br>
+          <label for="startDate">CHECK-IN:</label>
+          <input type="date" id="startDate" name="startDate" required>
+
+         
+          <br>
+          <br>
+
+          <label for="endDate" class="endDate1">CHECK-OUT:</label>
+          <input type="date" id="endDate" name="endDate" required>
+
+          <button type="button" id="bill-btn" onclick="calculateBill()">Calculate Bill</button>
+          <input type="submit" class="pay-bill" value="Submit">
+      </form>
+        
+        
+    </div>
+    
+    <div id="pay2" class="hidden">
+      <h2>Hotel Bill <img src="./assets/logo.png" alt="" /></h2>
+      
+      <hr>
+      <hr>
+      <br>
+      <p><b>Guest Name:</b> <span id="displayName"></span></p>
+      <br>
+      <p><b>Email:</b> <span id="displayEmail"></span></p>
+      <br>
+      <p><b>PhoneNumber: </b> <span id="displayphonenumber"> </span></p>
+      <br>
+      <p><b>CHECK-IN:</b> <span id="displayStartDate"></span></p>
+      <br>
+      <p><b>CHECK-OUT:</b> <span id="displayEndDate"></span></p>
+      <br>
+      <p><b>Rate per Day:</b> ₹<span id="displayRate"></span></p>
+      <br>
+      <p><b>GST : </b> 10%</p>
+      <br>
+      <p><b>GST Amount : </b> ₹ <span id="displaybill"> </span>1</p>
+      <br>
+      <p><b>Total Days:</b> <span id="displayDays"></span></p>
+      <br>
+      <h2>Total Bill: ₹<span id="displayTotalBill"></span></h2>
+      <button onclick="printBill()" class="print-btn">Print Bill</button>
+      
+     
+    
+  </div>
+
+<br>
+<footer class="footer" >
+  <div class="section__container footer__container">
+    <div class="footer__col">
+      <div class="logo">
+        <a href="#home"><img src="assets/logo.png" alt="logo" /></a>
+      </div>
+      <p class="section__description">
+        Discover a world of comfort, luxury, and adventure as you explore
+        our curated selection of hotels, making every moment of your getaway
+        truly extraordinary.
+      </p>
+     
+    </div>
+    <div class="footer__col">
+      <h4>QUICK LINKS</h4>
+      <ul class="footer__links">
+        <li><a href="#">Browse Destinations</a></li>
+        <li><a href="#">Special Offers and Packages</a></li>
+        <li><a href="#">Room Types and Amenities</a></li>
+        <li><a href="#">Customer Reviews and Ratings</a></li>
+        <li><a href="#">Travel Tips and Guides</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>OUR SERVICES</h4>
+      <ul class="footer__links">
+        <li><a href="#">Concierge Assistance</a></li>
+        <li><a href="#">Flexible Booking Options</a></li>
+        <li><a href="#">Airport Transfers</a></li>
+        <li><a href="#">Wellness and Recreation</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>CONTACT US</h4>
+      <ul class="footer__links">
+        <li><a href="#">The Velvet Viesta</a></li>
+      </ul>
+      <div class="footer__socials">
+        <a href="#"><img src="assets/facebook.png" alt="facebook" /></a>
+        <a href="#"><img src="assets/instagram.png" alt="instagram" /></a>
+        <a href="#"><img src="assets/youtube.png" alt="youtube" /></a>
+        <a href="#"><img src="assets/twitter.png" alt="twitter" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bar">
+    Copyright © 2023 Web Design Mastery. All rights reserved.
+  </div>
+</footer>
+<div class="loader">
+  <script>
+      window.addEventListener("load", () => {
+          const loader = document.querySelector(".loader");
+        
+          loader.classList.add("loader--hidden");
+        
+          loader.addEventListener("transitionend", () => {
+            document.body.removeChild(loader);
+          });
+        });
+        
+  </script>
+  </div>
+<script src="./bill.js"></script>
+<script src="./test/load.js"></script>
+
+</body>
+</html>

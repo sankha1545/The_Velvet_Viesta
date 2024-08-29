@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+<p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis veritatis animi aliquam laboriosam velit, esse, blanditiis aspernatur sint est magnam debitis delectus in fuga fugiat repellat dignissimos ipsum necessitatibus corrupti veniam reprehenderit,<span class="dots"> ...</span> <span class="moreText"> assumenda sapiente expedita labore atque! Sint velit cumque minus pariatur quisquam, beatae ab quo impedit eaque soluta vel laboriosam itaque similique iste ex aut in nihil dolorem consequuntur possimus eligendi eos optio ipsam! Sint ullam voluptate obcaecati asperiores eos vero sed iusto magnam ad, vel repellat quidem? Omnis fugit accusantium, illo quos eos odio consectetur et nemo excepturi deleniti dolorum adipisci dolores delectus possimus libero, sed iusto dolorem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis neque distinctio modi dicta ut impedit, vel dolore dolores maiores quis vitae nesciunt ab aut, praesentium facilis necessitatibus odio exercitationem velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, error fugit repellat laborum aspernatur neque eligendi officia eius quidem voluptates fugiat numquam, officiis ullam nemo, incidunt delectus. Consequuntur id veritatis odit, aspernatur libero recusandae doloremque necessitatibus aperiam esse eaque consectetur tempore qui quasi, corporis expedita excepturi natus reprehenderit illo temporibus. Veniam eius dolorem cumque! Iusto eum aut et ipsam nemo cum totam delectus explicabo? Quis odio perferendis aliquid facilis ea quaerat vero minima dolorem cumque, est ab! Vero fuga tenetur unde. Perferendis alias, fugit debitis culpa doloremque aperiam molestiae quos incidunt dolore iure officia! Blanditiis sint delectus quam quae nulla.</span></p>
+<button class="read-more-btn">Read More</button>
+
+<!-- *******************   -->
+<!--  This Code is for only the floating card in right bottom corner -->
+<!-- ********************  -->
+<div class="float-text">
+  <p>get in touch</p>
+</div>
+<div class="float-card-info">
+  <i class="gg-close-r"></i>
+  <p>coded by Web Cifar</p>
+  <div class="icons">
+    <a href="https://www.youtube.com/channel/UCdxaLo9ALJgXgOUDURRPGiQ" target="_blank"><i class="gg-youtube"></i></a>
+    <a href="https://facebook.com/webcifar" target="_blank"><i class="gg-facebook"></i></a>
+    <a href="https://instagram.com/web_cifar" target="_blank"><i class="gg-instagram"></i></a>
+    <a href="https://twitter.com/webcifar" target="_blank"><i class="gg-twitter"></i></a>
+  </div>
+  <a href="https://pph.me/webcifar" target="_blank" class="hire link">Hire</a>
+  <a class="link" href="https://webcifar.com" target="_blank">webcifar.com</a>
+  <a class="link" href="mailto:info@webcifar.com" target="_blank">info@webcifar.com</a>
+
+</div>
+<style>
+    body {
+        font-family: "Montserrat";
+        text-align: justify;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: rgb(18, 23, 27);
+        color: aliceblue;
+      }
+      .text {
+        font-size: 24px;
+      }
+      .moreText {
+        display: none;
+      }
+      .read-more-btn {
+        padding: 15px 60px;
+        background-color: rgb(149, 170, 197);
+        color: rgb(53, 49, 49);
+        border: none;
+        outline: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .text.show-more .moreText {
+        display: inline;
+      }
+      .text.show-more .dots {
+        display: none;
+      }
+      
+      /* ********************* */
+      /* This Code is for only the floating card in right bottom corner */
+      /* ********************** */
+      
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden;
+      }
+      .float-text {
+        display: inline-block;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: fit-content;
+        background-color: #192227;
+        color: whitesmoke;
+        font-family: "Montserrat";
+        text-transform: capitalize;
+        font-size: 15px;
+        padding: 10px 20px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.226);
+        cursor: pointer;
+        border: 1px solid white;
+      }
+      .float-card-info {
+        width: 300px;
+        position: fixed;
+        background-color: #263238;
+        border: 2px solid white;
+        overflow: hidden;
+        bottom: 5px;
+        right: -100%;
+        padding: 30px;
+        border-radius: 8px;
+        transition: 0.5s ease-in-out right;
+      }
+      .float-card-info p {
+        color: white;
+        font-size: 20px;
+        font-family: "Montserrat";
+        text-transform: capitalize;
+        width: 100%;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .gg-youtube {
+        --ggs: 1.5;
+      }
+      .float-card-info .icons {
+        width: 120px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: 20px;
+      }
+      .float-card-info .icons a {
+        display: inline-block;
+        cursor: pointer;
+        color: whitesmoke;
+      }
+      .float-card-info .icons a:hover {
+        color: rgb(127, 127, 129);
+      }
+      .float-card-info .link {
+        width: 100%;
+        display: block;
+        text-decoration: none;
+        color: whitesmoke;
+        font-family: "Montserrat";
+        font-size: 14px;
+        text-align: center;
+        margin-top: 5px;
+      }
+      .gg-close-r {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      .float-card-info.active {
+        right: 5px;
+        bottom: 5px;
+      }
+      
+      .float-card-info .hire {
+        background-color: #181e22;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 18px;
+        border-radius: 6px;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 10px 20px;
+        margin-top: 20px;
+      }
+      
+</style>
+<script>
+    const readMoreBtn = document.querySelector(".read-more-btn");
+    const text = document.querySelector(".text");
+    
+    readMoreBtn.addEventListener("click", (e) => {
+      text.classList.toggle("show-more");
+      if (readMoreBtn.innerText === "Read More") {
+        readMoreBtn.innerText = "Read Less";
+      } else {
+        readMoreBtn.innerText = "Read More";
+      }
+    });
+    
+   
+    
+    
+</script>
+</body>
+</html>
+<!--
+<script>
+        function compareDates() {
+            // Get the date values from the input fields
+            var bday = new Date(document.getElementById('bday').value);
+            var bday1 = new Date(document.getElementById('bday1').value);
+            var result = document.getElementById('result');
+
+          
+          
+          
+            // Clear previous result
+            result.innerHTML = '';
+
+            // Check if the dates are valid
+            if (!bday.getTime() || !bday1.getTime()) {
+                alert('enter valid dates');
+                return;
+            }
+
+            // Compare the dates
+            else if (bday >= bday1) {
+               alert('Invalid dates');
+            } 
+            else if(bday < bday1)
+             {  
+              window.location.href='booknow(after).html';
+              
+            }
+            
+        }
+    </script>
+-->
